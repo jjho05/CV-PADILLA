@@ -3,199 +3,274 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr. Alejandro Estrada Padilla | Portafolio Académico</title>
+    <title>Dr. Alejandro Estrada Padilla | Modern Computational Scholar</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Inter:wght@300;400;600&family=Plus+Jakarta+Sans:wght@400;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Reading Progress Bar -->
+    <div class="progress-container">
+        <div class="progress-bar" id="scroll-progress"></div>
+    </div>
+
     <nav class="navbar">
         <div class="nav-container">
-            <a href="#" class="nav-logo">Dr. Alejandro Estrada</a>
-            <button class="menu-toggle" aria-label="Abrir menú">
-                <span></span>
-                <span></span>
-                <span></span>
+            <div class="nav-brand">
+                <span class="brand-prefix">DR.</span>
+                <span class="brand-name">ESTRADA PADILLA</span>
+            </div>
+            
+            <button class="menu-toggle" aria-label="Toggle Menu">
+                <span class="line"></span>
+                <span class="line"></span>
             </button>
+
             <ul class="nav-links">
-                <li><a href="#about">Sobre Mí</a></li>
-                <li><a href="#research">Investigación</a></li>
-                <li><a href="#experience">Trayectoria</a></li>
-                <li><a href="#publications">Publicaciones</a></li>
-                <li><a href="#gallery">Galería</a></li>
-                <li><a href="#contact">Contacto</a></li>
+                <li><a href="#about"><span class="nav-num">01</span> Bio</a></li>
+                <li><a href="#research"><span class="nav-num">02</span> Research</a></li>
+                <li><a href="#experience"><span class="nav-num">03</span> Career</a></li>
+                <li><a href="#publications"><span class="nav-num">04</span> Papers</a></li>
+                <li><a href="#gallery"><span class="nav-num">05</span> Gallery</a></li>
+                <li><a href="#contact" class="nav-cta">Connect</a></li>
             </ul>
         </div>
     </nav>
 
     <header class="hero">
-        <div class="hero-content">
-            <div class="hero-image-container">
-                <img src="fotocv.png" alt="Dr. Alejandro Estrada Padilla" class="hero-image">
+        <div class="hero-grid">
+            <div class="hero-info">
+                <div class="hero-tag technical-font">PHD. COMPUTER SCIENCE</div>
+                <h1 class="hero-main-title">Alejandro<br>Estrada Padilla</h1>
+                <p class="hero-desc">
+                    Investigador especializado en <strong>Optimización Heurística</strong> y <strong>Algoritmos Evolutivos</strong>. 
+                    Desarrollando modelos computacionales de vanguardia para la toma de decisiones complejas.
+                </p>
+                <div class="hero-actions">
+                    <a href="#contact" class="btn-main">Iniciar Colaboración</a>
+                    <a href="CV-Alejandro-Estrada.pdf" target="_blank" class="btn-ghost technical-font">VIEW_FULL_CV.PDF</a>
+                </div>
             </div>
-            <div class="hero-text">
-                <p class="hero-subtitle">Doctor en Ciencias en Computación</p>
-                <h1 class="hero-title">Alejandro Estrada Padilla</h1>
-                <p class="hero-philosophy">"Transformando la complejidad computacional en soluciones óptimas para los desafíos del mañana."</p>
-                <div class="hero-cta">
-                    <a href="mailto:alejandro.ep@cdmadero.tecnm.mx" class="btn btn-primary">Ponerse en contacto</a>
-                    <a href="CV-Alejandro-Estrada.pdf" target="_blank" class="btn btn-secondary">Descargar CV (PDF)</a>
+            <div class="hero-visual">
+                <div class="hero-image-wrapper">
+                    <img src="fotocv.png" alt="Dr. Alejandro Estrada" class="hero-img">
+                    <div class="visual-deco"></div>
                 </div>
             </div>
         </div>
+        <div class="scroll-indicator technical-font">SCROLL_TO_DISCOVER</div>
     </header>
 
     <main>
-        <section id="about" class="section">
-            <div class="container grid-2">
-                <div class="section-header">
-                    <h2 class="title-serif">Semblanza Profesional</h2>
-                </div>
-                <div class="content-text">
-                    <p>Alejandro Estrada Padilla es un investigador y académico especializado en la optimización heurística de problemas complejos. Con raíces en Tampico, Tamaulipas, ha dedicado su carrera al desarrollo de soluciones computacionales avanzadas.</p>
-                    <p>Completó su <strong>Doctorado en Ciencias en Computación</strong> en el Instituto Tecnológico de Tijuana en 2022, enfocándose en la incorporación de preferencias en problemas de optimización multicriterio. Previamente, obtuvo su Maestría en el ITCM, especializándose en problemas de empacado de contenedores.</p>
+        <section id="about" class="section section-border">
+            <div class="section-container">
+                <div class="grid-layout">
+                    <div class="grid-aside">
+                        <span class="section-index technical-font">/01</span>
+                        <h2 class="section-title">Semblanza Profesional</h2>
+                    </div>
+                    <div class="grid-main">
+                        <div class="rich-text">
+                            <p class="lead">Liderando la intersección entre la teoría computacional y la aplicación industrial en optimización avanzada.</p>
+                            <p>El Dr. Estrada Padilla es un académico con visión técnica integral. Formado en Ingeniería Mecatrónica con un <strong>Doctorado en Ciencias en Computación</strong> (2022), su trabajo se enfoca en resolver problemas multiobjetivo dinámicos integrando preferencias humanas en el ciclo de optimización.</p>
+                            <p>Su trayectoria abarca desde la optimización de procesos industriales hasta el desarrollo de contenidos en analítica de negocios y big data.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="research" class="section section-dark">
-            <div class="container">
-                <h2 class="title-serif text-center">Áreas de Investigación</h2>
-                <div class="research-grid">
-                    <div class="research-card">
-                        <h3>Optimización Heurística</h3>
-                        <p>Resolución de problemas computacionalmente complejos con objetivos dinámicos y múltiples.</p>
+        <section id="research" class="section bg-light">
+            <div class="section-container">
+                <div class="grid-layout">
+                    <div class="grid-aside">
+                        <span class="section-index technical-font">/02</span>
+                        <h2 class="section-title">Especialización Científica</h2>
                     </div>
-                    <div class="research-card">
-                        <h3>Algoritmos Evolutivos</h3>
-                        <p>Desarrollo y aplicación de metaheurísticas inspiradas en la naturaleza para la ciencia de datos.</p>
-                    </div>
-                    <div class="research-card">
-                        <h3>Big Data & IA</h3>
-                        <p>Tecnologías de procesamiento a gran escala y programación agéntica aplicada a la industria.</p>
-                    </div>
-                    <div class="research-card">
-                        <h3>Decisión Multicriterio</h3>
-                        <p>Implementación de modelos TOPSIS y ELECTRE-TRI para la evaluación de no-inferioridad.</p>
+                    <div class="grid-main">
+                        <div class="nodes-grid">
+                            <div class="node-card">
+                                <div class="node-icon">01</div>
+                                <h3 class="node-title">Optimización Heurística</h3>
+                                <p class="node-desc">Modelado de problemas NP-duros con múltiples objetivos en entornos inciertos.</p>
+                            </div>
+                            <div class="node-card">
+                                <div class="node-icon">02</div>
+                                <h3 class="node-title">Sistemas Evolutivos</h3>
+                                <p class="node-desc">Metaheurísticas avanzadas inspiradas en procesos biológicos para IA.</p>
+                            </div>
+                            <div class="node-card">
+                                <div class="node-icon">03</div>
+                                <h3 class="node-title">Data Analytics</h3>
+                                <p class="node-desc">Procesamiento distribuido y arquitecturas Big Data para soporte a decisiones.</p>
+                            </div>
+                            <div class="node-card">
+                                <div class="node-icon">04</div>
+                                <h3 class="node-title">Multi-Criteria Decision</h3>
+                                <p class="node-desc">Implementación rigurosa de métodos TOPSIS y ELECTRE-TRI para evaluación.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
         <section id="experience" class="section">
-            <div class="container">
-                <h2 class="title-serif">Trayectoria y Formación</h2>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-date">2022 — Presente</div>
-                        <div class="timeline-content">
-                            <h3>Profesor de Ingeniería en Sistemas</h3>
-                            <p>Instituto Tecnológico de Ciudad Madero. Impartiendo cátedras de Big Data y Programación Lógica.</p>
-                        </div>
+            <div class="section-container">
+                <div class="grid-layout">
+                    <div class="grid-aside">
+                        <span class="section-index technical-font">/03</span>
+                        <h2 class="section-title">Experiencia y Formación</h2>
                     </div>
-                    <div class="timeline-item">
-                        <div class="timeline-date">2024</div>
-                        <div class="timeline-content">
-                            <h3>Catedrático de Posgrado</h3>
-                            <p>Anáhuac Online. Maestría en Analítica de Negocios. Especialista en Estadística Inferencial.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-date">2018 — 2022</div>
-                        <div class="timeline-content">
-                            <h3>Doctorado en Ciencias en Computación</h3>
-                            <p>IT Tijuana. Tesis sobre optimización multicriterio con dependencias temporales imperfectas.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-date">2016 — 2017</div>
-                        <div class="timeline-content">
-                            <h3>Maestría en Ciencias de la Computación</h3>
-                            <p>IT de Ciudad Madero. Becario CONACYT enfocado en optimización de empacado (VCSBPP).</p>
+                    <div class="grid-main">
+                        <div class="log-timeline">
+                            <div class="log-entry">
+                                <div class="log-time technical-font">2022 — NOW</div>
+                                <div class="log-content">
+                                    <h3 class="log-title">Profesor de Cátedra — ITCM</h3>
+                                    <p class="log-location">Departamento de Sistemas y Computación</p>
+                                    <ul class="log-details">
+                                        <li>Tecnologías para Big Data</li>
+                                        <li>Programación Lógica y Funcional</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="log-entry">
+                                <div class="log-time technical-font">2024 — 2025</div>
+                                <div class="log-content">
+                                    <h3 class="log-title">Profesor de Posgrado — Anáhuac Online</h3>
+                                    <p class="log-location">Maestría en Analítica de Negocios</p>
+                                    <p class="log-desc">Enfoque en Estadística Inferencial con Programación Matemática.</p>
+                                </div>
+                            </div>
+
+                            <div class="log-entry log-highlight">
+                                <div class="log-time technical-font">2018 — 2022</div>
+                                <div class="log-content">
+                                    <h3 class="log-title">Doctorado en Ciencias en Computación</h3>
+                                    <p class="log-location">Instituto Tecnológico de Tijuana</p>
+                                    <p class="log-desc">Tesis: Análisis de Modelos de NO-Inferioridad para incorporar Preferencias en Optimización Multicriterio.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="publications" class="section section-dark">
-            <div class="container">
-                <h2 class="title-serif">Producción Científica Destacada</h2>
-                <div class="publications-list">
-                    <div class="pub-item">
-                        <span class="pub-tag">JCR | Impact Factor 8.665</span>
-                        <h3>"GRASP/Δ: An efficient algorithm for the multi-objective portfolio optimization problem"</h3>
-                        <p>Expert Systems with Applications, Elsevier 2023.</p>
+        <section id="publications" class="section bg-navy text-white">
+            <div class="section-container">
+                <div class="grid-layout">
+                    <div class="grid-aside">
+                        <span class="section-index technical-font text-gold">/04</span>
+                        <h2 class="section-title text-white">Producción Científica</h2>
                     </div>
-                    <div class="pub-item">
-                        <span class="pub-tag">JCR | 2021</span>
-                        <h3>"Modeling and Optimizing the Multi-Objective Portfolio Optimization Problem with Trapezoidal Fuzzy Parameters"</h3>
-                        <p>Mathematical and Computational Applications, 2021.</p>
-                    </div>
-                    <div class="pub-item">
-                        <span class="pub-tag">Capítulo de Libro | Springer</span>
-                        <h3>"Variable neighborhood search algorithm for the variable cost and size bin packing problem"</h3>
-                        <p>Handbook of Research on Metaheuristics, IGI Global / Springer 2019-2021.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+                    <div class="grid-main">
+                        <div class="journal-list">
+                            <div class="journal-card">
+                                <div class="journal-header">
+                                    <span class="journal-impact technical-font">JCR 8.665</span>
+                                    <span class="journal-year technical-font">2023</span>
+                                </div>
+                                <h3 class="journal-title">"GRASP/Δ: An efficient algorithm for the multi-objective portfolio optimization problem"</h3>
+                                <p class="journal-venue">Expert Systems with Applications, Elsevier.</p>
+                            </div>
 
-        <section id="conferencias" class="section">
-            <div class="container">
-                <h2 class="title-serif text-center">Conferencias Recientes</h2>
-                <div class="conference-list">
-                    <div class="conf-item">
-                        <div class="conf-date">Marzo 2025</div>
-                        <div class="conf-content">
-                            <h3>Big Data, Redes Sociales e Inteligencia Artificial</h3>
-                            <p>Seminario Internacional de Innovación Computacional.</p>
-                        </div>
-                    </div>
-                    <div class="conf-item">
-                        <div class="conf-date">Noviembre 2025</div>
-                        <div class="conf-content">
-                            <h3>Inteligencia Artificial para Gestores Empresariales</h3>
-                            <p>XVII Foro de Ingeniería en Gestión Empresarial.</p>
+                            <div class="journal-card">
+                                <div class="journal-header">
+                                    <span class="journal-impact technical-font">JCR 2.250</span>
+                                    <span class="journal-year technical-font">2021</span>
+                                </div>
+                                <h3 class="journal-title">"Modeling and Optimizing the Multi-Objective Portfolio Optimization Problem with Trapezoidal Fuzzy Parameters"</h3>
+                                <p class="journal-venue">Mathematical and Computational Applications.</p>
+                            </div>
+
+                            <div class="journal-card">
+                                <div class="journal-header">
+                                    <span class="journal-impact technical-font">SPRINGER</span>
+                                    <span class="journal-year technical-font">2021</span>
+                                </div>
+                                <h3 class="journal-title">"Fuzzy Logic Hybrid Extensions of Neural and Optimization Algorithms"</h3>
+                                <p class="journal-venue">Book Chapter, Theory and Applications.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="gallery" class="section section-crema">
-            <div class="container">
-                <h2 class="title-serif text-center">Galería Académica</h2>
-                <div class="gallery-grid">
-                    <img src="image1.png" alt="Academia 1" class="gallery-img">
-                    <img src="image2.png" alt="Academia 2" class="gallery-img">
-                    <img src="image3.png" alt="Academia 3" class="gallery-img">
-                    <img src="image4.png" alt="Academia 4" class="gallery-img">
-                    <img src="image5.png" alt="Academia 5" class="gallery-img">
-                    <img src="image6.png" alt="Academia 6" class="gallery-img">
+        <section id="gallery" class="section section-border">
+            <div class="section-container">
+                <div class="grid-layout">
+                    <div class="grid-aside">
+                        <span class="section-index technical-font">/05</span>
+                        <h2 class="section-title">Evidencia Académica</h2>
+                    </div>
+                    <div class="grid-main">
+                        <div class="modern-gallery">
+                            <figure class="gallery-item">
+                                <img src="image1.png" alt="Conferencia Internacional" class="gallery-img">
+                                <figcaption class="technical-font">ACADEMIC_SESSION_01</figcaption>
+                            </figure>
+                            <figure class="gallery-item">
+                                <img src="image2.png" alt="Sesión de Laboratorio" class="gallery-img">
+                                <figcaption class="technical-font">RESEARCH_WORK_02</figcaption>
+                            </figure>
+                            <figure class="gallery-item">
+                                <img src="image3.png" alt="Presentación de Tesis" class="gallery-img">
+                                <figcaption class="technical-font">FIELD_ACTIVITY_03</figcaption>
+                            </figure>
+                            <figure class="gallery-item">
+                                <img src="image4.png" alt="Equipo de Investigación" class="gallery-img">
+                                <figcaption class="technical-font">LAB_RESOURCES_04</figcaption>
+                            </figure>
+                            <figure class="gallery-item">
+                                <img src="image5.png" alt="Seminario Big Data" class="gallery-img">
+                                <figcaption class="technical-font">LECTURE_SERIES_05</figcaption>
+                            </figure>
+                            <figure class="gallery-item">
+                                <img src="image6.png" alt="Clase de Sistemas" class="gallery-img">
+                                <figcaption class="technical-font">CLASS_ENVIRONMENT_06</figcaption>
+                            </figure>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
     <footer id="contact" class="footer">
-        <div class="container text-center">
-            <h2 class="title-serif">Contacto Profesional</h2>
-            <p>Dr. Alejandro Estrada Padilla</p>
-            <div class="contact-links">
-                <a href="mailto:alejandro.ep@cdmadero.tecnm.mx">alejandro.ep@cdmadero.tecnm.mx</a>
-                <span class="divider">|</span>
-                <a href="mailto:aestrada1993@hotmail.com">aestrada1993@hotmail.com</a>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h2 class="footer-logo">Dr. Estrada Padilla</h2>
+                <p class="footer-tagline">Optimización Computacional e IA</p>
             </div>
-            <p class="copyright">© 2026 Instituto Tecnológico de Ciudad Madero. Departamento de Sistemas y Computación.</p>
+            <div class="footer-col">
+                <h4 class="footer-heading technical-font">DIRECT_CONTACT</h4>
+                <div class="footer-links">
+                    <a href="mailto:alejandro.ep@cdmadero.tecnm.mx">alejandro.ep@cdmadero.tecnm.mx</a>
+                    <a href="mailto:aestrada1993@hotmail.com">aestrada1993@hotmail.com</a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-heading technical-font">LOCATION</h4>
+                <p>Instituto Tecnológico de Ciudad Madero<br>Tamaulipas, México.</p>
+            </div>
+        </div>
+        <div class="footer-bottom technical-font">
+            <span>© 2026_ALL_RIGHTS_RESERVED</span>
+            <span>BUILD_BY_ANTIGRAVITY</span>
         </div>
     </footer>
 
     <!-- Lightbox Modal -->
     <div id="lightbox" class="lightbox">
-        <span class="lightbox-close">&times;</span>
+        <div class="lightbox-overlay"></div>
+        <span class="lightbox-close technical-font">CLOSE_WINDOW [X]</span>
         <img class="lightbox-content" id="lightbox-img">
+        <div class="lightbox-caption technical-font" id="lightbox-caption"></div>
     </div>
 
     <script src="script.js"></script>
