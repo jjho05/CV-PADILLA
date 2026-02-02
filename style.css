@@ -178,13 +178,13 @@ body {
     overflow: hidden; /* Clips the image to the border radius */
     width: 100%;
     max-width: 1250px;
-    min-height: 650px; /* Force substantial height */
+    min-height: 550px; /* Reducido de 650px para ser más elegante en escritorio */
     border: 1px solid rgba(255, 255, 255, 0.5);
 }
 
 .card-content {
     flex: 1; /* Takes remaining space */
-    padding: 5rem;
+    padding: 4rem 5rem; /* Ajustado padding vertical */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -192,7 +192,7 @@ body {
 }
 
 .card-visual {
-    flex: 1.1; /* Slightly larger area for the photo */
+    flex: 1; /* Equilibrado 50/50 (antes 1.1) */
     position: relative;
     min-height: 100%;
     background-color: var(--bg-alt); /* Fallback color */
@@ -202,7 +202,7 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover; /* CRITICAL: Crops image perfectly to fill the area */
-    object-position: center top; /* Focus on face usually */
+    object-position: center 15%; /* Enfoca ligeramente más arriba del centro para capturar rostros */
     display: block;
     transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -578,8 +578,12 @@ body {
     }
     
     .card-visual {
-        height: 400px; /* Fixed height for image area */
+        height: 520px; /* Aumentado de 400px para ver más foto vertical en móvil */
         flex: none;
+    }
+
+    .hero-img {
+        object-position: center top; /* En móvil forzamos 'top' puro para asegurar la cabeza */
     }
 
     .hero-desc {
