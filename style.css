@@ -162,11 +162,11 @@ body {
 }
 
 .hero-grid {
-    max-width: 1150px; /* Reducido de 1300px para acercar el texto al centro */
+    max-width: 1400px; /* Aumentado para dar aire al texto */
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 0.9fr 1.1fr; /* Más espacio a la imagen (derecha) */
-    gap: 3rem; /* Espacio más unido */
+    grid-template-columns: 1fr 1fr; /* Equilibrio perfecto */
+    gap: 4rem;
     align-items: center;
 }
 
@@ -177,7 +177,7 @@ body {
 
 .hero-main-title {
     font-family: var(--title-font);
-    font-size: 5.5rem; /* Ajuste ligero para armonizar con el nuevo ancho */
+    font-size: 5.5rem;
     line-height: 0.95;
     font-weight: 800;
     letter-spacing: -3px;
@@ -187,7 +187,7 @@ body {
 .hero-desc {
     font-size: 1.25rem;
     color: var(--text-muted);
-    max-width: 480px; /* Texto un poco más compacto */
+    max-width: 550px; /* Más espacio para el texto */
     margin-bottom: 3rem;
 }
 
@@ -224,14 +224,14 @@ body {
     position: relative;
     width: fit-content;
     margin: 0 auto;
-    /* margin-left: auto;  Opcional: forzar a la derecha si se quiere */
+    margin-left: auto; /* CLAVE: Empuja la foto a la derecha */
 }
 
 .hero-img {
     width: 100%;
-    max-width: 650px; /* Aumentado de 520px a 650px - Foto Grande */
+    max-width: 700px; /* AÚN MÁS GIGANTE y nítida */
     border-radius: 8px;
-    box-shadow: 0 20px 50px rgba(0,0,0,0.15); /* Sombra un poco más marcada */
+    box-shadow: 0 20px 50px rgba(0,0,0,0.15);
     transition: var(--transition);
     position: relative;
     z-index: 2;
