@@ -33,6 +33,10 @@ body {
     overflow-x: hidden;
 }
 
+p {
+    text-align: justify;
+}
+
 .technical-font {
     font-family: var(--technical-font);
     font-size: 0.75rem;
