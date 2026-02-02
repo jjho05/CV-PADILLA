@@ -103,9 +103,9 @@ p {
 }
 
 .nav-container {
-    max-width: 1300px;
+    max-width: 1400px;
     margin: 0 auto;
-    padding: 0 4rem;
+    padding: 0 2rem; /* Reduced from 4rem to 2rem */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -115,7 +115,7 @@ p {
     font-family: var(--title-font);
     font-weight: 800;
     display: flex;
-    gap: 0.5rem;
+    gap: 0.3rem; /* Reduced from 0.5rem */
     font-size: 1.1rem;
     letter-spacing: -0.5px;
 }
