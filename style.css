@@ -257,6 +257,23 @@ p {
     box-shadow: 0 10px 20px rgba(0, 71, 171, 0.15);
 }
 
+.btn-ghost {
+    padding: 1.2rem 2.5rem;
+    background: transparent;
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 700;
+    border: 2px solid var(--border);
+    border-radius: 8px;
+    transition: var(--transition);
+}
+
+.btn-ghost:hover {
+    border-color: var(--cobalt);
+    color: var(--cobalt);
+    transform: translateY(-2px);
+}
+
 /* Removed old .hero-image-wrapper block */
 
 .scroll-indicator {
