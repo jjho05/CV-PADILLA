@@ -565,32 +565,36 @@ body {
     
     /* Hero Card Responsive */
     .hero-card {
-        flex-direction: column-reverse; /* Image on top */
+        flex-direction: column-reverse; /* Foto va visualmente arriba */
         height: auto;
-        max-width: 600px; /* Limit width on tablets/mobile */
+        max-width: 600px; 
         min-height: auto;
+        gap: 0; /* Eliminamos gaps raros */
     }
     
     .card-content {
-        padding: 3rem 2rem;
+        padding: 2rem;
         text-align: center;
-        align-items: center;
+        /* Aseguramos que el texto fluya normalmente */
+        display: block; 
     }
     
     .card-visual {
-        height: auto; /* Dejar que la imagen defina la altura */
+        /* En móvil, la foto es un bloque sólido arriba */
+        width: 100%;
+        height: auto;
         min-height: 400px;
         flex: none;
-        display: flex;
-        align-items: flex-start; /* Alinear imagen arriba */
+        display: block;
     }
 
     .hero-img {
+        width: 100%;
+        height: 100%;
+        min-height: 400px;
+        object-fit: contain; /* Foto completa sin cortes */
         object-position: top center;
-        height: auto; /* Altura natural para no recortar nada */
-        max-height: 600px; /* Límite para que no sea infinita */
-        object-fit: contain; /* CLAVE: Muestra la foto ENTERA sin recortes */
-        background: var(--bg-alt); /* Relleno si la foto es muy estrecha */
+        background: var(--bg-alt);
     }
 
     .hero-desc {
