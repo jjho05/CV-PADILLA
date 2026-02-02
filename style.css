@@ -227,14 +227,12 @@ body {
 .hero-img {
     width: 100%;
     border-radius: 8px;
-    filter: grayscale(1);
     transition: var(--transition);
     position: relative;
     z-index: 2;
 }
 
 .hero-img:hover {
-    filter: grayscale(0);
     transform: scale(1.02);
 }
 
