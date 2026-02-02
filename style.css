@@ -192,7 +192,7 @@ body {
 }
 
 .card-visual {
-    flex: 0.85; /* Reducido un poco más (antes 1) para que la foto sea más chica en escritorio */
+    flex: 0.7; /* Reduced from 0.85 */
     position: relative;
     min-height: 100%;
     background-color: var(--bg-alt); 
