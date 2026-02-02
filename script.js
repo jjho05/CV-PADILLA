@@ -22,30 +22,31 @@ document.addEventListener('DOMContentLoaded', () => {
     const navLinks = document.querySelector('.nav-links');
     
     if (menuToggle) {
-        menuToggle.addEventListener('click', () => {
+        menuToggle.addEventListener('click', (e) => {
+            e.stopPropagation();
+            menuToggle.classList.toggle('active');
             navLinks.classList.toggle('active');
             const isActive = navLinks.classList.contains('active');
             document.body.style.overflow = isActive ? 'hidden' : '';
-            
-            // Animate lines
-            const lines = menuToggle.querySelectorAll('.line');
-            if (isActive) {
-                lines[0].style.transform = 'translateY(4px) rotate(45deg)';
-                lines[1].style.transform = 'translateY(-4px) rotate(-45deg)';
-            } else {
-                lines[0].style.transform = '';
-                lines[1].style.transform = '';
-            }
         });
     }
 
-    // Close menu on link click
+    // Close menu on link click or outside click
+    document.addEventListener('click', (e) => {
+        if (navLinks.classList.contains('active')) {
+            if (!navLinks.contains(e.target) && e.target !== menuToggle) {
+                menuToggle.classList.remove('active');
+                navLinks.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        }
+    });
+
     document.querySelectorAll('.nav-links a').forEach(link => {
         link.addEventListener('click', () => {
+            menuToggle.classList.remove('active');
             navLinks.classList.remove('active');
             document.body.style.overflow = '';
-            const lines = menuToggle.querySelectorAll('.line');
-            lines.forEach(l => l.style.transform = '');
         });
     });
 

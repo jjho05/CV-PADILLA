@@ -509,6 +509,11 @@ body {
     color: #FFF;
     cursor: pointer;
     z-index: 20;
+    font-size: 1.2rem;
+    font-weight: 700;
+    background: rgba(255,255,255,0.1);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
 }
 
 /* Mobile Menu Toggle */
@@ -519,13 +524,23 @@ body {
     background: none;
     border: none;
     cursor: pointer;
+    z-index: 1100;
+    padding: 10px;
 }
 
 .menu-toggle .line {
-    width: 30px;
+    width: 25px;
     height: 2px;
     background: var(--text);
     transition: var(--transition);
+}
+
+.menu-toggle.active .line:nth-child(1) {
+    transform: translateY(4px) rotate(45deg);
+}
+
+.menu-toggle.active .line:nth-child(2) {
+    transform: translateY(-4px) rotate(-45deg);
 }
 
 /* Responsive */
@@ -549,23 +564,43 @@ body {
         top: 0;
         width: 100%;
         height: 100vh;
-        background: #FFF;
+        background: var(--bg);
         flex-direction: column;
         justify-content: center;
         padding: 4rem;
         transition: 0.6s var(--transition);
+        z-index: 1050;
     }
     
     .nav-links.active { right: 0; }
     
-    .hero-main-title { font-size: 4rem; letter-spacing: -2px; }
+    .hero-main-title { font-size: 3.5rem; letter-spacing: -2px; }
+    
+    .hero-img {
+        max-width: 280px;
+        margin: 0 auto;
+        display: block;
+    }
+    
+    .hero-image-wrapper {
+        display: flex;
+        justify-content: center;
+    }
 }
 
 @media (max-width: 600px) {
-    .hero-main-title { font-size: 3rem; }
+    .hero-main-title { font-size: 2.8rem; }
     .nodes-grid, .modern-gallery { grid-template-columns: 1fr; }
     .log-entry { grid-template-columns: 1fr; gap: 1rem; }
     .section { padding: 6rem 0; }
-    .hero-actions { flex-direction: column; align-items: flex-start; }
-    .btn-main { width: 100%; text-align: center; }
+    .hero-actions { flex-direction: column; align-items: stretch; gap: 1rem; }
+    .btn-main { text-align: center; }
+    .btn-ghost { text-align: center; }
+    
+    .hero-img {
+        max-width: 220px;
+    }
+    
+    .section-title { font-size: 2rem; }
+    .lead { font-size: 1.4rem; }
 }
