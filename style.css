@@ -544,8 +544,12 @@ body {
 
 @media (max-width: 900px) {
     .grid-layout { grid-template-columns: 1fr; gap: 2rem; }
-    .hero-grid { grid-template-columns: 1fr; gap: 4rem; }
+    .hero-grid { grid-template-columns: 1fr; gap: 3rem; }
     .hero-visual { order: -1; }
+    .hero-info { text-align: center; }
+    .hero-actions { justify-content: center; }
+    .hero-desc { margin-left: auto; margin-right: auto; }
+    
     .section-container, .nav-container, .hero { padding: 0 2rem; }
     .hero { padding-top: 8rem; }
     .footer-grid { grid-template-columns: 1fr; }
@@ -576,7 +580,7 @@ body {
     }
     
     .hero-img {
-        max-width: 320px;
+        max-width: 450px;
         margin: 0 auto;
         display: block;
     }
